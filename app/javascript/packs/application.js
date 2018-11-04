@@ -19,3 +19,8 @@
 
   // Specific frontend applications
   import 'davechmura_website'
+
+  import Vue from 'vue'
+  import BootstrapVue from 'bootstrap-vue'
+
+  Vue.use(BootstrapVue);
