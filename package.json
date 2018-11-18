@@ -4,13 +4,12 @@
   "dependencies": {
     "@rails/webpacker": "^4.0.0-pre.3",
     "babel-minify": "^0.5.0",
-    "bootstrap-vue": "^2.0.0-rc.11",
+    "bootstrap": "^4.1.3",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9",
     "rails-ujs": "^5.2.1",
     "stimulus": "^1.1.0",
     "turbolinks": "^5.2.0",
-    "vue": "^2.5.17",
-    "vue-loader": "^15.4.2",
-    "vue-template-compiler": "^2.5.17",
     "webpack-cli": "^3.1.2"
   },
   "devDependencies": {

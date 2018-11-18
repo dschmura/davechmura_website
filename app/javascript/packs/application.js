@@ -7,20 +7,19 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-  // import $ from 'jquery'
-  // global.$ = $
-  // global.jQuery = $
+import $ from 'jquery'
+global.$ = $
+global.jQuery = $
 
-  import Rails from 'rails-ujs'
-  Rails.start()
+import Rails from 'rails-ujs'
+Rails.start()
 
-  import Turbolinks from 'turbolinks'
-  Turbolinks.start()
+import Turbolinks from 'turbolinks'
+Turbolinks.start()
 
-  // Specific frontend applications
-  import 'davechmura_website'
+// Specific frontend applications
+import 'davechmura_website'
 
-  import Vue from 'vue'
-  import BootstrapVue from 'bootstrap-vue'
-
-  Vue.use(BootstrapVue);
+// $(function () {
+//   console.log('jQuery is loaded');
+// });
