@@ -2,7 +2,9 @@
   import 'bootstrap'
   import 'actiontext'
   import 'trix/dist/trix.css'
-
+  // import fontawesome from "@fortawesome/fontawesome-free";
+  import '@fortawesome/fontawesome-free/js/all';
+  
   // Include internal resources for this app
   import './javascripts/application'
   import './javascripts/agency.min'
