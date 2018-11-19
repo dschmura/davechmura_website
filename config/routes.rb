@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   get '/project_status', to: 'pages#project_status'
   get '/privacy', to: 'pages#privacy'
   get '/contact', to: 'pages#contact'
