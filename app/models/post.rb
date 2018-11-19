@@ -11,19 +11,13 @@
 
 class Post < ApplicationRecord
 
-  # enum status: [:draft, :unpublished, :published]
-
   enum status: {
     draft: 0,
     unpublished: 10,
     published: 20
   }
 
-  # enum status: {
-  #   draft: 'draft',
-  #   unpublished: 'unpublished',
-  #   published: 'published'
-  # }
+  has_rich_text :content
 
   validates_presence_of :title
 end
