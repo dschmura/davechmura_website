@@ -28,7 +28,7 @@ gem 'sidekiq', '~> 5.0'
 gem 'uglifier'
 gem "actiontext", github: "rails/actiontext", require: "action_text"
 gem "image_processing", "~> 1.2" # for Active Storage variants
-# gem 'devise', '~> 4.4.3'
+gem 'devise', '~> 4.5.0'
 # gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 # gem 'omniauth-facebook', '~> 4.0'
 # gem 'omniauth-twitter', '~> 1.4'
