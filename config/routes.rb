@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'pages/contact'
   get 'pages/privacy'
   get 'pages/project_status'
+  match '/resume', :to => 'resume#index', via: :get
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources 'feedbacks', only: [:create]
 end
