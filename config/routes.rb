@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
   resources :posts
+  devise_for :users
   get '/project_status', to: 'pages#project_status'
   get '/privacy', to: 'pages#privacy'
   get '/contact', to: 'pages#contact'

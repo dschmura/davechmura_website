@@ -1,25 +1,26 @@
 %h1 Listing posts
 
-%table
-  %thead
-    %tr
-      %th Title
-      %th Status
 
-      %th
-      %th
-      %th
+-# = link_to 'New Post', new_post_path if policy(@post).new?
 
-  %tbody
-    - @posts.each do |post|
-      %tr
-        %td= post.title
-        %td= post.status
+- @posts.each do |post|
+  .well
+    .media
+      %a.pull-left{:href => "#"}
+        %img.media-object{:src => "http://placekitten.com/150/150", :alt => 'Kitteh'}
+      .media-body
+        %h4.media-heading
+          = link_to post.title, post
+          = '(unpublished)' unless post.published?
+        %p.tex.t-right
+          By #{post.user.email}
+        %p= post.content
+        %ul.list-inline.list-unstyled
+          %li
+            %span
+              %i.glyphicon.glyphicon-calendar
+              = time_ago_in_words post.created_at
+              ago
 
-        %td= link_to 'Show', post
-        %td= link_to 'Edit', edit_post_path(post)
-        %td= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Post', new_post_path
+        = link_to 'Edit | ', edit_post_path(post) if policy(post).update?
+        = link_to 'Read More', post

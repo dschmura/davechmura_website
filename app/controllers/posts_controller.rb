@@ -1,20 +1,28 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+
+  after_action :verify_authorized, except: :index
+  after_action :verify_policy_scoped, only: :index
 
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    # @posts = Post.all
+    @posts = policy_scope(Post).reverse
+
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+    authorize @post
   end
 
   # GET /posts/new
   def new
-    @post = Post.new
+    @post = current_user.posts.new
+    authorize @post
   end
 
   # GET /posts/1/edit
@@ -24,7 +32,9 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(post_params)
+    # @post = Post.new(post_params)
+    @post = current_user.posts.create(post_params)
+    authorize @post
 
     respond_to do |format|
       if @post.save
@@ -40,6 +50,7 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
+    authorize @post
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
@@ -54,6 +65,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
+    authorize @post
     @post.destroy
     respond_to do |format|
       format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
@@ -65,10 +77,11 @@ class PostsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.find(params[:id])
+      authorize @post
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :status, :content)
+      params.require(:post).permit(:title, :status, :content, :user_id)
     end
 end
