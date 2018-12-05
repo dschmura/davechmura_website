@@ -29,8 +29,9 @@
         %li.nav-item= link_to 'Contact Us', contact_path, class:'nav-link'
         %li.nav-item= link_to 'Privacy Policy', privacy_path, class:'nav-link'
 
-        - if user_signed_in?
-          %li.nav-item= link_to("Log #{current_user.email} out.", destroy_user_session_path, method: :delete, class:'nav-link')
+        
+        - if current_user
+          %li.nav-item= link_to("Log out.", destroy_user_session_path, method: :delete, class:'nav-link')
         - else
           %li.nav-item= link_to('Login', new_user_session_path, class:'nav-link')
       .footer-copyright.text-center
