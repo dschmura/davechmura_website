@@ -28,14 +28,17 @@ img[alt=""] img:not([alt])
   position: relative
   top: 75px
   height: auto
+  padding: 3rem
 
-
+header
+  margin: -3rem
 
 
 @include media-breakpoint-up(xs)
   header
     position: relative
     top: -51px
+
   .skill-item
     @include make-col(12)
     padding: 1rem
@@ -51,6 +54,7 @@ img[alt=""] img:not([alt])
     font-size: 2rem
 @include media-breakpoint-up(lg)
   header
+
     position: relative
     top: -40px
   // Skills Section
