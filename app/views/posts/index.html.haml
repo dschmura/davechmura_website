@@ -14,7 +14,7 @@
           = '(unpublished)' unless post.published?
         %p.tex.t-right
           By #{post.user.email}
-        .truncated-post= post.content
+        .truncated-post.w-100= post.content
         %ul.list-inline.list-unstyled
           %li
             %span

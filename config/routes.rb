@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   get 'pages/contact'
   get 'pages/privacy'
   get 'pages/project_status'
+  get '/twitter' => redirect('https://twitter.com/humbledaisy')
+  get '/github' => redirect('https://github.com/dschmura')
+  get '/linkedin' => redirect('https://www.linkedin.com/in/davechmura/')
+
   match '/resume', :to => 'resume#index', via: :get
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources 'feedbacks', only: [:create]

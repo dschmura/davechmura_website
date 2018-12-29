@@ -1,5 +1,5 @@
 !!!
-%html
+%html.h-full
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title= (t :sitename)
@@ -9,7 +9,7 @@
     - if content_for? :head
       = yield :head
 
-  %body
+  %body.flex.flex-col
     .container#page-top
     - unless Rails.env.production?
       .corner-ribbon.top-right.sticky.red.shadow= link_to('Work in Progress', project_status_path)
@@ -17,7 +17,7 @@
     = render 'layouts/header'
     = render 'layouts/flash_messages'
 
-    .content#content{:class => controller.controller_name}
+    .content.flex-1#content{:class => controller.controller_name}
 
       = yield
 

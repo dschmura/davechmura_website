@@ -1,40 +1,70 @@
--# %footer
--#   .footer-logo
--#     = link_to image_tag(asset_pack_path('davechmura_website/images/DavePics/hug.jpg'), alt: "#{(t :sitename)} Logo, link to home page.", id: root_path(anchor: 'page-top')), root_path
--#     .sitename= link_to (t :sitename), root_path
+-# %footer.bg-blue-lighter.pin-b
+-#   .footer-logo.w-24.h-24.mx-4
+-#     = link_to image_tag(asset_pack_path('davechmura_website/images/DavePics/hug.jpg'), alt: "#{(t :sitename)} Logo, link to home page.", class: 'rounded-full bg-grey h-24 w-24', id: root_path(anchor: 'page-top')), root_path
+-#     -# .sitename= link_to (t :sitename), root_path
 -#
 -#   .footer-links
 -#     .footer-site-links
--#       %li= link_to 'About', about_path
--#       %li= link_to 'Contact Us', contact_path
--#       %li= link_to 'Privacy Policy', privacy_path
+-#       .py-2= link_to 'About', about_path
+-#       .py-2= link_to 'Contact Us', contact_path
+-#       .py-2= link_to 'Privacy Policy', privacy_path
 -#     .footer-copyright
 -#       = link_to "© 2018 - Copyright #{t :sitename}", about_path
 -#   .footer-social
 -#     SOCIAL
--#   -# .footer-contact
--#     -# = render 'feedback/feedback'
--#     Contact
+  -# .footer-contact
+    -# = render 'feedback/feedback'
+    Contact
 
 
+-# %footer.fixed-bottom.bg-dark
+-#   .d-flex.flex-row.justify-content-between.align-items-center
+-#     .footer-logo
+-#       -# = link_to image_tag("#{sitename}Logo.png", class: 'navbar-brand navbar-logo', alt: "#{sitename} Logo, link to home page."), root_path
+-#       = link_to (t :sitename), root_path, class:'navbar-brand'
+-#     .footer-links
+-#       %ul.navbar-nav.flex-row.justify-content-around
+-#         -# %li.nav-item= link_to 'About', about_path, class:'nav-link'
+-#         -# %li.nav-item= link_to 'Contact Us', contact_path, class:'nav-link'
+-#         %li.nav-item= link_to 'Privacy Policy', privacy_path, class:'nav-link'
+-#
+-#
+-#         - if current_user
+-#           %li.nav-item= link_to("Log out.", destroy_user_session_path, method: :delete, class:'nav-link')
+-#         - else
+-#           %li.nav-item= link_to('Login', new_user_session_path, class:'nav-link')
+-#       .footer-copyright.text-center
+-#         = link_to "© 2018 - Copyright #{(t :sitename)}, All Rights Reserved", about_path
+-#     .footer-contact
+-#       -# = render 'feedback/feedback'
+%footer.pin-b.bg-blue-lighter.px-6
+  %nav.h-14.font-sans.flex.flex-col.text-center.sm:flex-row.sm:text-left.sm:justify-between.sm:items-baseline
+    .mb-0
+      = link_to image_tag(asset_pack_path('davechmura_website/images/DavePics/hug.jpg'), alt: "#{(t :sitename)} Logo, link to home page.", class: 'rounded-full h-24 w-24', id: root_path(anchor: 'page-top')), root_path
+    .footer-links.flex.flex-row
+      .px-4.mx-2= link_to 'About', about_path
+      .px-4.mx-2= link_to 'Contact', contact_path
+      .px-4.mx-2= link_to 'Privacy Policy', privacy_path
+    .social-links
 
-%footer.fixed-bottom.bg-dark
-  .d-flex.flex-row.justify-content-between.align-items-center
-    .footer-logo
-      -# = link_to image_tag("#{sitename}Logo.png", class: 'navbar-brand navbar-logo', alt: "#{sitename} Logo, link to home page."), root_path
-      = link_to (t :sitename), root_path, class:'navbar-brand'
-    .footer-links
-      %ul.navbar-nav.flex-row.justify-content-around
-        -# %li.nav-item= link_to 'About', about_path, class:'nav-link'
-        -# %li.nav-item= link_to 'Contact Us', contact_path, class:'nav-link'
-        %li.nav-item= link_to 'Privacy Policy', privacy_path, class:'nav-link'
+      .flex.flex-row.mr-2
+        = link_to twitter_path, target: '_blank' do
+          .social
+            %i.fab.fa-twitter
 
 
-        - if current_user
-          %li.nav-item= link_to("Log out.", destroy_user_session_path, method: :delete, class:'nav-link')
-        - else
-          %li.nav-item= link_to('Login', new_user_session_path, class:'nav-link')
-      .footer-copyright.text-center
-        = link_to "© 2018 - Copyright #{(t :sitename)}, All Rights Reserved", about_path
-    .footer-contact
-      -# = render 'feedback/feedback'
+        = mail_to 'dschmura@humbledaisy.com', subject: 'A message to ye from ye old site' do
+          .social
+            %i.fab.fa-envelope
+
+        -# .social
+        -#   %i.fas.fa-podcast
+        = link_to github_path, target: '_blank' do
+          .social
+            %i.fab.fa-github
+
+        = link_to linkedin_path, target: '_blank' do
+          .social
+            %i.fab.fa-linkedin-in
+  .footer-copyright.text-sm.mb-1.-mt-8
+    = link_to "© 2018 - Copyright #{t :sitename}, All Rights Reserved", about_path, class: 'text-blue-darker'
