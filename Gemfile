@@ -30,6 +30,7 @@ gem "actiontext", github: "rails/actiontext", require: "action_text"
 gem "image_processing", "~> 1.2" # for Active Storage variants
 gem 'devise', '~> 4.5.0'
 gem 'pundit'
+gem 'acts-as-taggable-on', '~> 6.0'
 # gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 # gem 'omniauth-facebook', '~> 4.0'
 # gem 'omniauth-twitter', '~> 1.4'
