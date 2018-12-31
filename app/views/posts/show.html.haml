@@ -1,6 +1,9 @@
 %p#notice= notice
 
 %h1= @post.title
+.post-tags
+  - @post.tag_list.each do |tag|
+    .post-tag= tag
 %p
   %b Status:
   = @post.status

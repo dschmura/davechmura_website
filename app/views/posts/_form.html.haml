@@ -7,11 +7,16 @@
           %li= message
 
   .field
-    = f.label :title
-    = f.text_field :title
+    .text-3xl= f.label "Title:"
+    .h-12.text-3xl.shadow= f.text_field :title
   .field
     = f.label :status
     = f.select :status, :collection => Post.statuses.keys.to_a
+  .field
+    = f.label 'Tag Me'
+    .h-12.text-3xl.shadow= f.text_field :tag_list
+
+
 
   .field
     = f.rich_text_area :content

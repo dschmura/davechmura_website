@@ -4,8 +4,17 @@
 
 .truncated-post
   & .trix-content
+    @apply h-48  overflow-y-hidden border-b
 
-    max-height: 300px
-    overflow: hidden
-    text-overflow: ellipsis
-    white-space: nowrap
+
+
+.media-heading
+  @apply border-b pb-4
+  a
+    @apply text-blue-dark
+
+.post-tags
+  @apply bg-grey-lightest flex flex-wrap
+
+.post-tag
+  @apply  bg-blue w-auto my-2 mx-2 rounded py-1 px-2 text-center

@@ -11,7 +11,7 @@
 #
 
 class Post < ApplicationRecord
-  
+
   belongs_to :user
 
   enum status: {
@@ -21,6 +21,6 @@ class Post < ApplicationRecord
   }
 
   has_rich_text :content
-
+  acts_as_taggable_on :tags
   validates_presence_of :title
 end
