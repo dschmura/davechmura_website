@@ -24,3 +24,7 @@ import 'davechmura_website'
 //   console.log('jQuery is loaded');
 // });
 import "actiontext"
+
+document.addEventListener('turbolinks:load', () => {
+  FontAwesome.dom.i2svg();
+})
