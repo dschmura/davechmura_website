@@ -3,6 +3,9 @@
 @import '~bootstrap/scss/bootstrap'
 @import 'variables'
 @import 'mixins'
+@tailwind preflight
+@tailwind components
+@tailwind utilities
 
 .modal-backdrop
   z-index: -1 !important
@@ -10,6 +13,8 @@
 // You Forgot The Alt Message
 img[alt=""] img:not([alt])
   border: 5px dashed #c00
+.content
+  @apply -my-6 px-6
 
 // .container
 //   display: grid
@@ -23,45 +28,45 @@ img[alt=""] img:not([alt])
 // .content
 //   grid-column: span 12
 //   padding:  0 2rem
-.content
-  // padding: 1rem
-  position: relative
-  top: 75px
-  height: auto
-  padding: 3rem
+// .content
+//   // padding: 1rem
+//   position: relative
+//   top: 75px
+//   height: auto
+//   padding: 3rem
 
-header
-  margin: -3rem
-
-
-@include media-breakpoint-up(xs)
-  header
-    position: relative
-    top: -51px
-
-  .skill-item
-    @include make-col(12)
-    padding: 1rem
-    font-size: 1.5rem
-@include media-breakpoint-up(md)
-  header
-    position: relative
-    top: -40px
-  // Skills Section
-  .skill-item
-    @include make-col(6)
-    padding: 2rem
-    font-size: 2rem
-@include media-breakpoint-up(lg)
-  header
-
-    position: relative
-    top: -40px
-  // Skills Section
-  .skill-item
-    @include make-col(4)
-    padding: 2rem
-    font-size: 3rem
+// header
+//   margin: -3rem
+//
+//
+// @include media-breakpoint-up(xs)
+//   header
+//     position: relative
+//     top: -51px
+//
+//   .skill-item
+//     @include make-col(12)
+//     padding: 1rem
+//     font-size: 1.5rem
+// @include media-breakpoint-up(md)
+//   header
+//     position: relative
+//     top: -40px
+//   // Skills Section
+//   .skill-item
+//     @include make-col(6)
+//     padding: 2rem
+//     font-size: 2rem
+// @include media-breakpoint-up(lg)
+//   header
+//
+//     position: relative
+//     top: -40px
+//   // Skills Section
+//   .skill-item
+//     @include make-col(4)
+//     padding: 2rem
+//     font-size: 3rem
 
 .debug_dump
   grid-column: span 12

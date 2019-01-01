@@ -1,65 +1,21 @@
-// @import 'variables'
-//
-// header
-//
-//   height: auto
-//   padding: 1rem 0 1rem 0
-//   z-index: 100000
-//   background-image: url("../images/DavePics/hug_70.svg")
-//   background-repeat: no-repeat
-//   background-attachment: scroll
-//   background-position: center center
-//   // background-color: $navbarBackground
-//   a
-//     text-decoration: none
-//     color: $navbarLink
-//     &:active
-//       color: transparentize($navbarLink, 0.5)
-//       border-bottom: 2px solid #000000
-//       font-weight: 300
-//     &:hover
-//       color: $navbarLinkHover
-//   .header-logo
-//     display: grid
-//     grid-template-columns: 5rem auto
-//     justify-content: start
-//     align-items: center
-//     text-align: center
-//     max-height: 45px
-//     img
-//       margin: 0 1rem
-//       border-radius: 35px
-//
-//     a
-//       font-size: 2rem
-//
-//   nav
-//     ul
-//       li
-//         display: inline-block
-//         padding: 0.5rem 1.4em 0 0
-//         font-size: 1.2rem
-//
-// // Screen width smaller than 600px
-// @media screen and (max-width : 600px)
-//   header
-//     background-color: transparentize($navbarBackground, 0.5)
-//     // display: none
-//     // visibility: hidden
-//     grid-template-rows: auto
-//     justify-content: center
-//     align-items: center
-//     text-align: center
-//     .header-logo
-//       grid-column: span 12
-//       justify-content: center
-//       height: 45px
-//       img
-//         height: 45px
-//       .sitename
-//         display: none
-//     nav
-//       grid-column: span 12
-//       ul
-//         li
-//           font-size: 0.9em
+@tailwind preflight
+@tailwind components
+@tailwind utilities
+@import 'variables'
+// .social
+//   @apply .flex .items-center .justify-center .text-grey-darker .font-semibold .border-2 .text-xs .border-blue .rounded-full .mx-1 .h-8 .w-8 bg-blue-lightest
+//   &:hover
+//     @apply .bg-blue-lighter
+//     color: white
+
+header
+  @apply bg-grey-darker py-2
+
+.header-logo
+  @apply w-12 h-12 rounded-full ml-3
+
+.header-nav
+  a
+    @apply float-right mx-4 text-blue-lightest mt-3
+    &:hover
+      @apply text-blue-lighter no-underline
