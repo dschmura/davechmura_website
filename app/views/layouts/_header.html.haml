@@ -13,8 +13,10 @@
     = link_to image_tag(asset_pack_path('davechmura_website/images/DavePics/hug.jpg'), alt: "#{(t :sitename)} Logo, link to home page.", class: 'header-logo ', id: root_path(anchor: 'page-top')), root_path
 
   .header-nav.flex-row.h-12{:class => "w-1/2 sm:w-full"}
-    = link_to "Contact Me", contact_path
-    = link_to "About", about_path
+    = link_to 'Contact Me', contact_path
+    = link_to 'Blog', posts_path
+    = link_to 'About', about_path
+
 
     -# = link_to "Privacy", privacy_path
 
