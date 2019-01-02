@@ -1,0 +1,43 @@
+@tailwind preflight
+@tailwind components
+@tailwind utilities
+
+
+.h-5
+  height: 1.25rem
+.w-5
+  width: 1.25rem
+.h-40
+  height: 10rem
+.-mt-16
+  margin-top: -4rem
+.-mt-24
+  margin-top: -6rem
+
+.page-title
+  @apply .bg-grey-light .text-grey-darkest .border-grey-darker .font-bold .py-20 .px-4 .rounded .mx-auto
+
+.page-text
+  @apply .bg-indigo-light .rounded .p-5 .text-xl
+  p
+    @apply .leading-none
+.page-text-blue
+  color: yellow
+
+
+.characteristic
+  @apply .flex .items-center .justify-center .text-grey-darker .font-semibold .border-2 .text-xs .border-grey-light .rounded-full .h-6 .w-6
+  &:hover
+    @apply .bg-indigo-lighter
+    color: white
+
+%button
+  &:hover
+  @apply .bg-pink-light
+
+.card-button
+  &:hover
+    @apply .bg-pink-light
+
+.header-link
+  @apply .text-lg .no-underline .text-grey-darkest
