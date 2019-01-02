@@ -9,13 +9,19 @@
 //     color: white
 
 header
-  @apply bg-grey-darker py-2
+  @apply .bg-grey-darker .py-2
 
 .header-logo
-  @apply w-12 h-12 rounded-full ml-3
+  @apply .w-12 .h-12 .rounded-full .ml-3
 
 .header-nav
   a
-    @apply float-right mx-4 text-blue-lightest mt-3
+    @apply .float-right .mx-4 .text-blue-lightest .mt-3
     &:hover
-      @apply text-blue-lighter no-underline
+      @apply .text-blue-lighter .no-underline
+
+.header-nav--main
+  a
+    @apply .float-left .mx-4 .text-blue-lightest
+    &:hover
+      @apply .text-blue-lighter .no-underline
