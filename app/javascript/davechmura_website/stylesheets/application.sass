@@ -1,74 +1,21 @@
 
 
 @import 'variables'
-@import 'mixins'
+
 @tailwind preflight
 @tailwind components
 @tailwind utilities
 
 .modal-backdrop
   z-index: -1 !important
-
 // You Forgot The Alt Message
 img[alt=""] img:not([alt])
   border: 5px dashed #c00
 
 body
-  @apply flex flex-col h-full bg-blue-lightest
+  @apply flex flex-col h-full
 .content
   @apply -my-6 px-6 mx-auto
-
-// .container
-//   display: grid
-//   grid-template-areas: 'header header' 'content' 'debug' 'footer'
-//   grid-template-columns: repeat(12, 1fr)
-//   grid-template-rows: auto 1fr auto 75px
-//   height: 100vh
-//   margin: 0 -1.1rem 0 -1rem
-//   font-family: $font-family-base
-//
-// .content
-//   grid-column: span 12
-//   padding:  0 2rem
-// .content
-//   // padding: 1rem
-//   position: relative
-//   top: 75px
-//   height: auto
-//   padding: 3rem
-
-// header
-//   margin: -3rem
-//
-//
-// @include media-breakpoint-up(xs)
-//   header
-//     position: relative
-//     top: -51px
-//
-//   .skill-item
-//     @include make-col(12)
-//     padding: 1rem
-//     font-size: 1.5rem
-// @include media-breakpoint-up(md)
-//   header
-//     position: relative
-//     top: -40px
-//   // Skills Section
-//   .skill-item
-//     @include make-col(6)
-//     padding: 2rem
-//     font-size: 2rem
-// @include media-breakpoint-up(lg)
-//   header
-//
-//     position: relative
-//     top: -40px
-//   // Skills Section
-//   .skill-item
-//     @include make-col(4)
-//     padding: 2rem
-//     font-size: 3rem
 
 .debug_dump
   grid-column: span 12

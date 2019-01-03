@@ -2,22 +2,29 @@
 @tailwind components
 @tailwind utilities
 
-@import '~bootstrap/scss/functions'
-@import '~bootstrap/scss/bootstrap'
+// Background Cover Mixin
+
+=background-cover
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  background-size: cover
+  -o-background-size: cover
+
 @import 'variables'
 @import 'mixins'
 
-// Global Components
-// body
-//   overflow-x: hidden
-//   +body-font
+.intro-call-to-action
+  a
+    @apply px-4 py-2 rounded bg-yellow-dark text-2xl text-white
 
 section
-  @apply w-full
+  @apply w-full border-b mb-3
+  h2
+    @apply text-grey-darker
 
 .skills
   .section-head
-    @apply text-blue-dark text-3xl
+    @apply text-grey-darker text-3xl
     p
       @apply text-2xl text-grey-darker
 
@@ -31,34 +38,12 @@ section
 
 
 // END Skills Section
-
-
 .text-muted
   @apply text-grey-light
 
 .text-primary
   color: $theme-primary !important
 
-// p
-//   font-size: 1.2rem
-//   line-height: 1.75
-
-// p.large
-//   font-size: 1.2rem
-
-
-
-// Restyled Primary Buttons
-
-.btn-primary
-  +button-variant(white, $theme-primary, $theme-primary)
-  +heading-font
-
-  font-weight: 700
-
-.btn-xl
-  +button-variant(white, $theme-primary, $theme-primary)
-  +heading-font
 
 
 .intro-text
@@ -121,146 +106,8 @@ section
         line-height: 75px
         margin-bottom: 50px
 
-// Global Section Styles
 
-section
-  padding: 1rem 0
-
-  h2.section-heading
-    @apply text-2xl
-    // font-size: 3rem
-    margin-top: 0
-    margin-bottom: 15px
-
-  h3.section-subheading
-    font-size: 16px
-
-    +serif-font
-
-    text-transform: none
-    font-style: italic
-    font-weight: 400
-    margin-bottom: 75px
-
-@media (min-width: 768px)
-  section
-    padding: 1rem 0
-
-// Services Section
-
-.service-heading
-  margin: 15px 0
-  text-transform: none
-
-// Portfolio Section
-
-#portfolio
-  img
-    @include make-col(12)
-  .portfolio-item
-    margin: 0 0 15px
-    right: 0
-
-    .portfolio-link
-      display: block
-      position: relative
-      max-width: 400px
-      margin: 0 auto
-
-      .portfolio-hover
-        background: fade-out($theme-primary, 0.9)
-        position: absolute
-        width: 100%
-        height: 100%
-        opacity: 0
-        transition: all ease 0.5s
-        -webkit-transition: all ease 0.5s
-        -moz-transition: all ease 0.5s
-
-        &:hover
-          opacity: 1
-
-        .portfolio-hover-content
-          position: absolute
-          width: 100%
-          height: 20px
-          font-size: 20px
-          text-align: center
-          top: 50%
-          margin-top: -12px
-          color: white
-
-          i
-            margin-top: -12px
-
-          h3, h4
-            margin: 0
-
-    .portfolio-caption
-      max-width: 400px
-      margin: 0 auto
-      background-color: white
-      text-align: center
-      padding: 25px
-
-      h4
-        text-transform: none
-        margin: 0
-
-      p
-        +serif-font
-
-        font-style: italic
-        font-size: 16px
-        margin: 0
-
-  *
-    z-index: 2
-
-@media (min-width: 767px)
-  #portfolio
-    .portfolio-item
-      margin: 0 0 30px
 
 
 .btn:focus, .btn:active, .btn.active, .btn:active:focus
   outline: none
-
-.portfolio-modal
-  .modal-dialog
-    margin: 0
-    height: 100%
-    width: auto
-
-  .modal-content
-    border-radius: 0
-    background-clip: border-box
-    -webkit-box-shadow: none
-    box-shadow: none
-    border: none
-    min-height: 100%
-    width: 600px
-    padding: 100px 0
-    text-align: center
-
-    h2
-      margin-bottom: 15px
-      font-size: 3em
-
-    p
-      margin-bottom: 30px
-
-    p.item-intro
-      margin: 20px 0 30px
-
-      +serif-font
-
-      font-style: italic
-      font-size: 16px
-
-    ul.list-inline
-      margin-bottom: 30px
-      margin-top: 0
-
-    img
-      margin-bottom: 30px
