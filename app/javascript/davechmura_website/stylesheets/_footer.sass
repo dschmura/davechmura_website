@@ -4,29 +4,44 @@
 @import 'variables'
 
 footer
-  @apply .pin-b .w-full
+  @apply pin-b w-full
+
 .footer
-  @apply .bg-blue-lightest .p-2 .flex .content-center .self-center .justify-around
+  @apply bg-blue-lightest p-2 flex content-center self-center justify-around
+  @screen sm
+    // @apply bg-yellow
+  @screen md
+    // @apply bg-green
+
 .footer-logo
-  @apply  w-1/3
+  @apply  w-1/4
   img
-    @apply .h-16 .w-16 .rounded-full
+    @apply h-16 w-16 rounded-full
+
 .footer-links
-  @apply w-auto .flex .flex-col .content-center .self-center .justify-center
+  @apply w-auto flex flex-col content-center self-center justify-center
   .main-links
-    @apply  .content-center .self-center .justify-center
+    @apply  content-center self-center justify-center
     a
-      @apply .px-4 .text-lg .text-blue-dark
+      @apply px-3 text-lg text-blue-dark
+      &:hover
+        @apply no-underline text-blue-light
+      @screen sm
+        @apply text-sm px-1
   .copyright
-    @apply .text-blue-darker .text-sm .content-center .self-center .justify-center .mt-4 .self-end
+    a
+      @apply text-grey-dark text-sm block self-center
+      &:hover
+        @apply no-underline text-blue
+
 .foot-social
-  @apply  w-1/3 .flex .content-center .self-center .justify-center
+  @apply  w-1/4 flex content-center self-center justify-center
 
 
 
 .social-links
-  @apply .flex .flex-row .mr-2
+  @apply flex flex-row mr-2
 .social
-  @apply .flex .items-center .justify-center .text-grey-darker .font-semibold .border-2 .text-xs .border-blue .rounded-full .mx-1 .h-8 .w-8 .bg-blue-lightest
+  @apply flex items-center justify-center text-grey-darker font-semibold border-2 text-xs border-blue rounded-full mx-1 h-8 w-8 bg-blue-lightest
   &:hover
-    @apply .bg-blue-lighter text-white
+    @apply bg-blue-lighter text-white

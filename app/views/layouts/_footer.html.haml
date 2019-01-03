@@ -13,7 +13,9 @@
         = link_to('Login', new_user_session_path)
 
     .copyright
-      = link_to "© 2018 - Copyright #{t :sitename}, All Rights Reserved", about_path
+      = link_to about_path do
+        .statement= "© 2018 - Copyright - #{t :sitename}"
+        -# .all-rights-reserved= "All Rights Reserved"
   .foot-social
     .social-links
       = link_to twitter_path, target: '_blank' do
