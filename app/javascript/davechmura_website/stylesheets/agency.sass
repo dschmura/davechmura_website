@@ -12,9 +12,15 @@
 //   overflow-x: hidden
 //   +body-font
 
+section
+  @apply w-full
+
 .skills
-.section-head
-  @apply w-full flex flex-col
+  .section-head
+    @apply text-blue-dark text-3xl
+    p
+      @apply text-2xl text-grey-darker
+
 // Skills Section
 .skill-item
   @apply w-full px-3 text-lg text-grey-darker
@@ -40,28 +46,7 @@
 // p.large
 //   font-size: 1.2rem
 
-a, a:hover, a:focus, a:active, a.active
-  outline: none
 
-a
-  color: $theme-primary
-
-a:hover, a:focus, a:active, a.active
-  color: darken($theme-primary, 10%)
-
-h1, h2, h3, h4, h5, h6
-  +heading-font
-
-  font-weight: 700
-
-.img-centered
-  margin: 0 auto
-
-.bg-light-gray
-  background-color: $gray-lighter
-
-.bg-darkest-gray
-  background-color: $gray-darker
 
 // Restyled Primary Buttons
 
@@ -142,7 +127,8 @@ section
   padding: 1rem 0
 
   h2.section-heading
-    font-size: 3rem
+    @apply text-2xl
+    // font-size: 3rem
     margin-top: 0
     margin-bottom: 15px
 
