@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/twitter' => redirect('https://twitter.com/humbledaisy')
   get '/github' => redirect('https://github.com/dschmura')
   get '/linkedin' => redirect('https://www.linkedin.com/in/davechmura/')
+  get '/umich' => redirect('https://www.umich.edu')
 
   match '/resume', :to => 'resume#index', via: :get
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
