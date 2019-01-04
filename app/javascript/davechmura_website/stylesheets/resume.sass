@@ -1,13 +1,15 @@
-// Place all the styles related to the resume controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-@import '~bootstrap/scss/functions'
-@import '~bootstrap/scss/bootstrap'
+// @tailwind preflight
+// @tailwind components
+// @tailwind utilities
+// @import '~bootstrap/scss/functions'
+// @import '~bootstrap/scss/bootstrap'
+
 @import 'variables'
-@import 'mixins'
+// @import 'mixins'
 
 .resume-header
-  height: 250px
+  @apply h-64
+  // height: 250px
   background-color:  #EBAA1E
   background-image: url('../images/resume_header.jpg')
   background-position: right
@@ -15,6 +17,8 @@
   background-repeat: no-repeat
 
   .resume-contact
+    // @apply text-center
+
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif
     font-weight: 700
     position: relative
@@ -30,7 +34,8 @@
 
 .resume-name
   a
-    color: #FFFFFF
+    @apply text-white
+
     position: relative
     top: 13px
     right: 1.9rem
@@ -73,21 +78,21 @@
     font-size: $fontsize * 1.5
 
   background-color: yellow
-  @include make-row()
+  // @include make-row()
 
   .resume-activities
     background-color: #e64141
-    @include make-col(4)
+    // @include make-col(4)
     padding: 1rem
     li
       font-size: $fontsize * 0.9
   .resume-summary
     background-color: #17a7d5
-    @include make-col(8)
+    // @include make-col(8)
     padding: 1rem
     font-size: $fontsize
   .resume-skills
-    @include make-col(12)
+    // @include make-col(12)
     background-color: #2bb94b
     padding: 1rem
     font-size: $fontsize
@@ -98,7 +103,7 @@
   // @include margin( 1rem null null null)
 
 .resume-employment-dates
-  @include make-col(3)
+  // @include make-col(3)
   font-style: oblique
   font-weight: bold
 
@@ -115,13 +120,11 @@
 
 .resume-experience-section
   font-size: $fontsize
-  @include make-col(9)
-  // @include outer-container
+  // @include make-col(9)
 
-  // @include margin(1rem 2rem null 2rem)
   margin: 2rem
   .resume-job-experiences
-    // @include row()
+
     position: relative
     left: 3%
     li
@@ -135,7 +138,7 @@
   .resume-experience-sidebar
     margin-bottom: 1rem
     padding: 1rem
-    @include rounded-corners(15px)
+    // @include rounded-corners(15px)
     // @include padding( 1rem 1rem 1rem 1rem)
     // @include margin( null null 1rem null)
     background: #607B9B
@@ -147,13 +150,13 @@
   .resume-a-bit-about-me-sidebar
     padding: 1rem
     background-color: #79A092
-    @include rounded-corners(15px)
+    // @include rounded-corners(15px)
     // @include padding( 1rem 1rem 1rem 1rem)
     // @include margin( null null 1rem null)
   .resume-education-sidebar
     padding: 1rem
     margin-top: 1rem
-    @include rounded-corners(15px)
+    // @include rounded-corners(15px)
     // @include padding( 1rem 1rem null 1rem)
     background-color: #607B9B
 
