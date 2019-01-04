@@ -1,2 +1,2 @@
 web: rails server -p 3000
-webpack: bin/webpack-dev-server
+webpacker: NODE_ENV=production ./bin/webpack --watch --colors --progress
