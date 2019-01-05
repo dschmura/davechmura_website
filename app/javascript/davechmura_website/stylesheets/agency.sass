@@ -2,6 +2,8 @@
 @tailwind components
 @tailwind utilities
 // Background Cover Mixin
+@import 'variables'
+@import 'mixins'
 
 =background-cover
   -webkit-background-size: cover
@@ -9,23 +11,46 @@
   background-size: cover
   -o-background-size: cover
 
+.text-muted
+  @apply text-grey-darkest
 
-@import 'variables'
-@import 'mixins'
+.text-primary
+  color: $theme-primary !important
+
+
+.mast-header
+  background-image: url("../images/DavePics/hug_70.svg")
+  background-repeat: no-repeat
+  background-attachment: scroll
+  background-position: center center
+  +background-cover
+  @apply text-center
+  // height: 15%
+
+  .mast-header-text
+    @apply  p-24
+    margin: 3rem
+    // padding: 5rem
+    color: #2a5278
+
+.intro-lead-in
+  @apply font-sans text-5xl font-bold
+
+.intro-heading
+  @apply font-serif text-4xl italic leading-loose text-blue
+  // @apply text-2xl italic
+
+.intro-text
+  @apply text-grey-darkest mt-12
+  p
+    @apply text-xl
+    @apply my-4 text-2xl
 
 .intro-call-to-action
   @apply mt-6
   a
     @apply px-4 py-2 rounded bg-yellow-dark text-2xl text-white
 
-.intro-text
-  // @apply bg-blue-lightest
-  p
-    @apply my-4 text-3xl
-// section
-//   @apply border-b mb-3
-//   h2
-//     @apply text-grey-darker
 
 // Skills Section
 .skills
@@ -38,7 +63,7 @@
   @apply flex flex-wrap  content-center self-center justify-between
 
   .skill-item
-    @apply text-base text-blue-darkest text-center w-full bg-blue-lightest p-2 border-8 border-white rounded
+    @apply text-base text-blue-darkest text-center w-full bg-blue-lightest p-3 border-8 border-white rounded
 
   @screen sm
     @apply text-base
@@ -56,40 +81,6 @@
       @apply w-1/3
 
 // END Skills Section
-.text-muted
-  @apply text-grey-darkest
-
-.text-primary
-  color: $theme-primary !important
-
-.intro-text
-  @apply text-grey-darkest mt-12
-  p
-    @apply text-xl
-
-.mast-header
-  background-image: url("../images/DavePics/hug_70.svg")
-  background-repeat: no-repeat
-  background-attachment: scroll
-  background-position: center center
-  +background-cover
-  @apply text-center
-  height: 15%
-
-  .mast-header-text
-    @apply  p-24
-    margin: 3rem
-    // padding: 5rem
-    color: #2a5278
-
-.intro-lead-in
-  @apply font-sans text-5xl font-bold
-
-.intro-heading
-  @apply font-serif text-4xl italic leading-loose text-blue
-  // @apply text-2xl italic
-
-
 
 //
 // @media (min-width: 768px)
