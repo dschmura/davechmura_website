@@ -15,31 +15,31 @@
   background-position: right
   background-size: 100% 107%
   background-repeat: no-repeat
-  @apply h-64
+  @apply h-48 border-white border-b-4 rounded
 .resume-contact
-  // @apply text-center
+  .social-links
+    @apply text-center
 
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif
-  font-weight: 700
+
   position: relative
   bottom: 5%
   // @include transparent(0.85, 85)
   width: 250px
-  min-height: 200px
-  border-bottom: 10px solid #fff
-  transform: rotate(-90deg)
-  -webkit-transform: rotate(-90deg)
-  -moz-transform: rotate(-90deg)
+
+
+  // transform: rotate(-90deg)
+  // -webkit-transform: rotate(-90deg)
+  // -moz-transform: rotate(-90deg)
   background-color:  #EBAA1E
+  @apply font-bold font-sans  h-48
 
 .resume-name
   a
-    @apply text-white
+    @apply text-white text-3xl no-underline
 
     position: relative
-    top: 13px
-    right: 1.9rem
-    font-size: $fontsize * 1.75
+
     &:hover
       text-decoration: none
 
@@ -47,7 +47,7 @@
   h3
     position: relative
     bottom: 0px
-    right: 1rem
+
 
     @apply text-white font-bold text-2xl
 
@@ -60,7 +60,6 @@
 
 .resume
   @apply
-
 .resume-button
   width: 60%
   position: relative
@@ -72,18 +71,17 @@
 
 .resume-activities
   background-color: #e64141
-  @apply bg-grey-light p-1 text-base
+  @apply bg-grey-light p-2 text-base
   li
     @apply list-reset
 
 .resume-summary
-  @apply bg-blue-lighter p-1 text-base 
+  @apply bg-blue-lighter p-2 text-base
 
 .resume-skills
   // @include make-col(12)
-  background-color: #2bb94b
-  padding: 1rem
-  font-size: $fontsize
+  // background-color: #2bb94b
+  @apply bg-green-lightest p-2 text-base
 
 .resume-job
   font-size: $fontsize

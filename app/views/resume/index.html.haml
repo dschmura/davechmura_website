@@ -8,20 +8,38 @@
     %br
     .resume-email
       dschmura@humbledaisy.com
+    .social-links
+      = link_to twitter_path, target: '_blank' do
+        .social
+          %i.fab.fa-twitter
 
-    .resume-contact-social
-      .resume-email-social
-        email
-      .resume-twitter-social
-        twitter
-      .resume-linkedin-social
-        social
-      .resume-github-social
-        github
-      .resume-address-social
-        address
-      .resume-telephone-social
-        telephone
+      = mail_to 'dschmura@humbledaisy.com', subject: 'A message to ye from ye old site' do
+        .social
+          -# %i.fab.fa-envelope
+          M
+      -# .social
+      -#   %i.fas.fa-podcast
+      = link_to github_path, target: '_blank' do
+        .social
+          %i.fab.fa-github
+
+      = link_to linkedin_path, target: '_blank' do
+        .social
+          %i.fab.fa-linkedin-in
+
+    -# .resume-contact-social
+    -#   .resume-email-social
+    -#     email
+    -#   .resume-twitter-social
+    -#     twitter
+    -#   .resume-linkedin-social
+    -#     social
+    -#   .resume-github-social
+    -#     github
+      -# .resume-address-social
+      -#   address
+      -# .resume-telephone-social
+      -#   telephone
 
 .resume-masthead
   .resume-summary
