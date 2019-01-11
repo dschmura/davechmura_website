@@ -5,17 +5,7 @@
 @import 'variables'
 @import 'mixins'
 
-=background-cover
-  -webkit-background-size: cover
-  -moz-background-size: cover
-  background-size: cover
-  -o-background-size: cover
-
-.text-muted
-  @apply text-grey-darkest
-
-.text-primary
-  color: $theme-primary !important
+// =background-cover
 
 
 .mast-header
@@ -23,15 +13,17 @@
   background-repeat: no-repeat
   background-attachment: scroll
   background-position: center center
-  +background-cover
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  background-size: cover
+  -o-background-size: cover
   @apply text-center
   // height: 15%
 
   .mast-header-text
-    @apply  p-24
-    margin: 3rem
-    // padding: 5rem
-    color: #2a5278
+    @apply  p-24 text-blue-darker m-12
+
+
 
 .intro-lead-in
   @apply font-sans text-5xl font-bold
@@ -54,6 +46,7 @@
 
 // Skills Section
 .skills
+  
 .section-head
   @apply text-grey-darkest text-3xl my-8 text-center
   p

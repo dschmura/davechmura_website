@@ -8,29 +8,29 @@
 // @import 'mixins'
 
 .resume-header
-  @apply h-64
+
   // height: 250px
   background-color:  #EBAA1E
   background-image: url('../images/resume_header.jpg')
   background-position: right
   background-size: 100% 107%
   background-repeat: no-repeat
+  @apply h-64
+.resume-contact
+  // @apply text-center
 
-  .resume-contact
-    // @apply text-center
-
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif
-    font-weight: 700
-    position: relative
-    bottom: 5%
-    // @include transparent(0.85, 85)
-    width: 250px
-    min-height: 200px
-    border-bottom: 10px solid #fff
-    transform: rotate(-90deg)
-    -webkit-transform: rotate(-90deg)
-    -moz-transform: rotate(-90deg)
-    background-color:  #EBAA1E
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif
+  font-weight: 700
+  position: relative
+  bottom: 5%
+  // @include transparent(0.85, 85)
+  width: 250px
+  min-height: 200px
+  border-bottom: 10px solid #fff
+  transform: rotate(-90deg)
+  -webkit-transform: rotate(-90deg)
+  -moz-transform: rotate(-90deg)
+  background-color:  #EBAA1E
 
 .resume-name
   a
@@ -46,12 +46,10 @@
 .resume-phone
   h3
     position: relative
-    bottom: 5px
-    right: 1.9rem
-    font-size: $fontsize * 1.2
-    font-style: bold
-    color: #FFFFFF
+    bottom: 0px
+    right: 1rem
 
+    @apply text-white font-bold text-2xl
 
 .resume-email
   position: relative
@@ -62,40 +60,33 @@
 
 .resume
   // @include outer-container(100%)
-  // display: flex
-  p
-    font-size: $fontsize * 0.5
-  // ul
-  //   li
-  //     list-style-type: circle
+  // display: fle
+  @apply 
+
 .resume-button
   width: 60%
   position: relative
   left: 20%
 
 .resume-masthead
+
   h2
-    font-size: $fontsize * 1.5
+    @apply text-2xl
 
-  background-color: yellow
-  // @include make-row()
+.resume-activities
+  background-color: #e64141
+  @apply bg-grey-light p-1 text-base
+  li
+    @apply list-reset
 
-  .resume-activities
-    background-color: #e64141
-    // @include make-col(4)
-    padding: 1rem
-    li
-      font-size: $fontsize * 0.9
-  .resume-summary
-    background-color: #17a7d5
-    // @include make-col(8)
-    padding: 1rem
-    font-size: $fontsize
-  .resume-skills
-    // @include make-col(12)
-    background-color: #2bb94b
-    padding: 1rem
-    font-size: $fontsize
+.resume-summary
+  @apply bg-blue-light p-1 text-base
+
+.resume-skills
+  // @include make-col(12)
+  background-color: #2bb94b
+  padding: 1rem
+  font-size: $fontsize
 
 .resume-job
   font-size: $fontsize
@@ -121,8 +112,7 @@
 .resume-experience-section
   font-size: $fontsize
   // @include make-col(9)
-
-  margin: 2rem
+  @apply m-2 text-base w-auto
   .resume-job-experiences
 
     position: relative
@@ -133,32 +123,38 @@
       list-style-type: circle
 
 .resume-sidebar
-  margin-top: 3rem
-  margin-right: 1rem
+  @apply w-1/3 mt-3 mr-2
+  p
+    @apply text-base
+  h3
+    @apply p-2 text-3xl mb-2 text-grey-darkest
+  // margin-top: 3rem
+  // margin-right: 1rem
+  li
+    @apply list-reset
   .resume-experience-sidebar
-    margin-bottom: 1rem
-    padding: 1rem
-    // @include rounded-corners(15px)
-    // @include padding( 1rem 1rem 1rem 1rem)
-    // @include margin( null null 1rem null)
-    background: #607B9B
-    min-height: auto
+    @apply  bg-blue-light rounded-lg p-2
+    h3
+      @apply text-grey-darkest
     li
-      color: white
-      font-weight: bold
+      @apply text-blue-darker font-bold text-xl mb-1 -ml-2
+    .resume-experience-description
+      @apply text-blue-lightest pb-2
 
   .resume-a-bit-about-me-sidebar
-    padding: 1rem
-    background-color: #79A092
-    // @include rounded-corners(15px)
-    // @include padding( 1rem 1rem 1rem 1rem)
-    // @include margin( null null 1rem null)
+    // background-color: #79A092
+    @apply bg-blue-lighter p-3
+
   .resume-education-sidebar
-    padding: 1rem
-    margin-top: 1rem
-    // @include rounded-corners(15px)
-    // @include padding( 1rem 1rem null 1rem)
-    background-color: #607B9B
+    // background-color: #607B9B
+    @apply bg-blue-darkest text-white p-2 rounded-lg
+    h3
+      @apply text-grey-light
+    h4
+      @apply text-xl
+    .degree
+      @apply ml-2 mb-4 text-base text-blue-lighter
+
 
 .field-circle
   float: right

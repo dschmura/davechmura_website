@@ -24,51 +24,64 @@
         telephone
 
 .resume-masthead
-  -# .resume-activities
-  -#   = render 'activities'
   .resume-summary
     = render 'summary'
+  .resume-activities
+    = render 'activities'
+
   .resume-skills
     = render 'skills'
 
-.resume
+.resume.flex
 
   .resume-sidebar
-    -# .resume-experience-sidebar
+    .resume-experience-sidebar
       %h3 Experience
-      %ol
+      %ul
         %li Project Management
-        For any project to be successful, it needs to be tended, cared for, and nurtured to completion.  Every project that I have worked on has involved my direct interaction with the client and I recognize the importance of instilling confidence and delivering quality results.
+
+        .resume-experience-description
+          For any project to be successful, it needs to be tended, cared for, and nurtured to completion.  Every project that I have worked on has involved my direct interaction with the client and I recognize the importance of instilling confidence and delivering quality results.
 
         %li Instructional Technology
-        I have worked collaboratively with educators at various levels of competency to help them effectively integrate and leverage technology in their instruction.
+        .resume-experience-description
+          I have worked collaboratively with educators at various levels of competency to help them effectively integrate and leverage technology in their instruction.
 
         %li Public Speaking
-        I am comfortable speaking extemporaneously with individuals, groups and in front of thousands of people.
+        .resume-experience-description
+          I am comfortable speaking extemporaneously with individuals, groups and in front of thousands of people.
 
         %li Leadership
-        I think that excellent leaders approach their roles as providing support and resources that allow and encourage those around them to succeed.  An effective manager understands the strengths and weaknesses of their staff, removes barriers to their success and inspires them to excel.
+        .resume-experience-description
+          I think that excellent leaders approach their roles as providing support and resources that allow and encourage those around them to succeed.  An effective manager understands the strengths and weaknesses of their staff, removes barriers to their success and inspires them to excel.
 
     .resume-a-bit-about-me-sidebar
       %h3 A bit about me...
-      %p My unusually diverse background makes me an ideal candidate.  My range of experience includes project management, teaching and counseling students and staff as director of a boarding school, policy development,
-      .field-circle
-        = image_tag(asset_pack_path"davechmura_website/images/field_circle.png", alt: 'Field of daisies. Stockbrdige, MA')
-      marketing, customer relations, social networking, web site development, crisis counseling, quality assurance, computer maintenance, trouble-shooting & repair, software development, and large scale software deployment. This eclectic mix of skills provides me with an excellent mix of technological knowledge, observational skills and an understanding of what individuals and groups need to be inspired, work, and meet their potential.
+      %p
+        My unusually diverse background makes me an ideal candidate.  My range of experience includes project management, teaching and counseling students and staff as director of a boarding school, policy development,
+        .field-circle
+          = image_tag(asset_pack_path"davechmura_website/images/field_circle.png", alt: 'Field of daisies. Stockbrdige, MA')
+      %p marketing, customer relations, social networking, web site development, crisis counseling, quality assurance, computer maintenance, trouble-shooting & repair, software development, and large scale software deployment. This eclectic mix of skills provides me with an excellent mix of technological knowledge, observational skills and an understanding of what individuals and groups need to be inspired, work, and meet their potential.
 
     .resume-education-sidebar
       %h3 Education
+      %ul
+        %li
+          %h4 University of Michigan, 2002
+          .degree
+            Masters of Science (Information), School of Information, Ann Arbor, MI
+            %br Human Computer Interaction
 
-      %p University of Michigan, 2002
-      %br Masters of Science (Information), School of Information, Ann Arbor, MI
-      %br Human Computer Interaction
+        %li
+          %h4 Alma College, 1995
+          .degree
+            Bachelor of Science (Psychology), Alma, MI
+            %br Graduated with honors
 
-      %p Alma College, 1995
-      %br Bachelor of Science (Psychology), Alma, MI
-      %br Graduated with honors
-
-      %p Dev Bootcamp
-      %br 19 week intensive training in full stack web application development. Chicago, IL
+        %li
+          %h4 Dev Bootcamp
+          .degree
+            19 week intensive training in full stack web application development. Chicago, IL
 
   .resume-experience-section
     %h2 Experience
