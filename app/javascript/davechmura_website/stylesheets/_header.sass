@@ -1,29 +1,17 @@
-@tailwind preflight
-@tailwind components
-@tailwind utilities
-@import 'variables'
-// .social
-//   @apply .flex .items-center .justify-center .text-grey-darker .font-semibold .border-2 .text-xs .border-blue .rounded-full .mx-1 .h-8 .w-8 bg-blue-lightest
-//   &:hover
-//     @apply .bg-blue-lighter
-//     color: white
-
 header
-  a
-    @apply no-underline
-  @apply bg-grey-darker p-2
   min-height: 3.5rem
+  @apply bg-grey-darker flex flex-wrap items-center justify-center h-auto
+  a
+    @apply text-blue-lightest font-sans no-underline text-xl
+  a:hover
+    @apply text-blue-lighter no-underline
+  @screen sm
+    @apply justify-between
+
 .header-logo
   @apply w-12 h-12 rounded-full ml-4
 
-.header-nav
+.header-links
+  @apply flex flex-no-wrap
   a
-    @apply float-right mx-4 text-blue-lightest mt-3
-    &:hover
-      @apply text-blue-lighter no-underline
-
-.header-nav--main
-  a
-    @apply float-left mx-4 text-blue-lightest
-    &:hover
-      @apply text-blue-lighter no-underline
+    @apply px-4
