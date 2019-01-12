@@ -1,11 +1,4 @@
-// @tailwind preflight
-// @tailwind components
-// @tailwind utilities
-// @import '~bootstrap/scss/functions'
-// @import '~bootstrap/scss/bootstrap'
-
 @import 'variables'
-// @import 'mixins'
 
 .resume-header
 
@@ -15,7 +8,7 @@
   background-position: right
   background-size: 100% 107%
   background-repeat: no-repeat
-  @apply h-48 border-white border-b-4 rounded
+  @apply h-48 border-white border-b-4 rounded-lg
 .resume-contact
   .social-links
     @apply text-center
@@ -59,7 +52,7 @@
   color: #FFFFFF
 
 .resume
-  @apply
+  @apply text-blue-darkest
 .resume-button
   width: 60%
   position: relative
@@ -89,7 +82,7 @@
   // @include margin( 1rem null null null)
 
 .resume-employment-dates
-  // @include make-col(3)
+  @apply invisible
   font-style: oblique
   font-weight: bold
 
