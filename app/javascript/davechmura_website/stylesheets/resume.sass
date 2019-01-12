@@ -1,5 +1,6 @@
 @import 'variables'
-
+.resume-container
+  @apply w-screen -ml-6 -mt-2
 .resume-header
 
   // height: 250px
@@ -8,55 +9,36 @@
   background-position: right
   background-size: 100% 107%
   background-repeat: no-repeat
-  @apply h-48 border-white border-b-4 rounded-lg
-.resume-contact
+  @apply h-32 border-white border-b-4
+
+  .resume-contact
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif
+
+    // @include transparent(0.85, 85)
+    width: 250px
+    // transform: rotate(-90deg)
+    // -webkit-transform: rotate(-90deg)
+    // -moz-transform: rotate(-90deg)
+    background-color:  #EBAA1E
+    @apply text-center mt-4 h-full flex flex-col w-64
+
   .social-links
-    @apply text-center
-
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif
-
-  position: relative
-  bottom: 5%
-  // @include transparent(0.85, 85)
-  width: 250px
-
-
-  // transform: rotate(-90deg)
-  // -webkit-transform: rotate(-90deg)
-  // -moz-transform: rotate(-90deg)
-  background-color:  #EBAA1E
-  @apply font-bold font-sans  h-48
+    @apply text-center content-center mt-1 mx-auto items-center pb-4
 
 .resume-name
   a
-    @apply text-white text-3xl no-underline
-
-    position: relative
-
+    @apply text-white text-2xl no-underline
     &:hover
-      text-decoration: none
+      @apply text-blue no-underline
 
 .resume-phone
-  h3
-    position: relative
-    bottom: 0px
-
-
-    @apply text-white font-bold text-2xl
+  @apply text-white font-medium text-base
 
 .resume-email
-  position: relative
-  left: 6px
-  font-size: 14px
-  font-style: bold
-  color: #FFFFFF
+  @apply text-white text-sm font-medium mb-2
 
 .resume
   @apply text-blue-darkest
-.resume-button
-  width: 60%
-  position: relative
-  left: 20%
 
 .resume-masthead
   h2
