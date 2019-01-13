@@ -10,17 +10,15 @@
       = yield :head
 
   %body.flex.flex-col
-    .container#page-top
+    #page-top
     - unless Rails.env.production?
       .corner-ribbon.top-right.sticky.red.shadow= link_to('Work in Progress', project_status_path)
 
     = render 'layouts/header'
-    = render 'layouts/flash_messages'
 
     .content.flex-1#content{:class => controller.controller_name}
-
+      = render 'layouts/flash_messages'
       = yield
-
-      = debug(params) if Rails.env.development?
+    = debug(params) if Rails.env.development?
 
     = render 'layouts/footer'

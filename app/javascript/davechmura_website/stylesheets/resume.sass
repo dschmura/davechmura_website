@@ -1,8 +1,8 @@
 @import 'variables'
 .resume-container
-  @apply w-screen -ml-6 -mt-1
-.resume-header
+  // @apply  w-screen
 
+.resume-header
   // height: 250px
   background-color:  #EBAA1E
   background-image: url('../images/resume_header.jpg')
@@ -12,81 +12,34 @@
   @apply h-32 border-white border-b-4
 
   .resume-contact
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif
-
     // @include transparent(0.85, 85)
-    width: 250px
     // transform: rotate(-90deg)
     // -webkit-transform: rotate(-90deg)
     // -moz-transform: rotate(-90deg)
     background-color:  #EBAA1E
-    @apply text-center mt-4 h-full flex flex-col w-64
-
-  .social-links
-    @apply text-center content-center mt-1 mx-auto items-center pb-4
-
-.resume-name
-  a
-    @apply text-white text-2xl no-underline
-    &:hover
-      @apply text-blue no-underline
-
-.resume-phone
-  @apply text-white font-medium text-base
-
-.resume-email
-  @apply text-white text-sm font-medium mb-2
-
-.resume
-  @apply text-blue-darkest
-
-.resume-masthead
-  h2
-    @apply text-2xl
-
-.resume-activities
-  background-color: #e64141
-  @apply bg-grey-light p-2 text-base
-  li
-    @apply list-reset
+    @apply text-center font-sans mt-4 h-full flex flex-col w-64 border-r-4 border-white
+    .social-links
+      @apply text-center content-center mt-1 mx-auto items-center pb-4
+    .resume-name
+      a
+        @apply text-white text-2xl no-underline
+        &:hover
+          @apply text-blue no-underline
+    .resume-phone
+      @apply text-white font-medium text-base
+    .resume-email
+      @apply text-white text-sm font-medium mb-2
 
 .resume-summary
-  @apply bg-blue-lighter p-2 text-base
+  @apply bg-blue-lighter p-4 px-8 rounded-lg
+  p
+    @apply text-lg leading-normal
 
-.resume-skills
-  // @include make-col(12)
-  // background-color: #2bb94b
-  @apply bg-green-lightest p-2 text-base
+.resume
+  @apply flex  flex-row text-blue-darkest
 
-.resume-job
-  @apply text-base my-2 text-blue-dark -mb-1
-
-.resume-employment-dates
-  @apply invisible leading-none font-semibold italic text-blue-dark
-
-.resume-employer
-  font-size: 120%
-  line-height: 1rem
-  @apply text-grey-darkest mt-3
-.resume-job-location
-  display: none
-  font-style: oblique
-  font-weight: bold
-  float: right
-  margin-right: 1rem
-
-.resume-experience-section
-  // @include make-col(9)
-  @apply p-4 text-base w-5/6 max-w-xl
-  h2
-
-  .resume-job-experiences
-    @apply text-blue-darkest
-    li
-      list-style-type: circle
-      @apply leading-normal
 .resume-sidebar
-  @apply w-1/3 mr-2 my-3
+  @apply  mr-2 my-3 w-1/2
   p
     @apply text-base
   h3
@@ -96,7 +49,7 @@
   li
     @apply list-reset
   .resume-experience-sidebar
-    @apply  bg-blue-light rounded-lg p-1 pb-6
+    @apply  bg-blue-light rounded-lg pb-6
     h3
       @apply text-grey-darkest
     li
@@ -106,17 +59,80 @@
 
   .resume-a-bit-about-me-sidebar
     // background-color: #79A092
-    @apply bg-blue-lighter p-3 pb-6 -mt-2 rounded-lg
+    @apply bg-blue-lighter p-4 pb-8 -mt-2 rounded-lg
+    p
+      @apply text-blue-darker text-base px-4
 
   .resume-education-sidebar
     // background-color: #607B9B
-    @apply bg-blue-darkest text-white rounded-lg -mt-4 pb-2
+    @apply bg-blue-darkest text-white rounded-lg -mt-4 p-4
+    ul
+      @apply -ml-8
     h3
       @apply text-grey-light
     h4
       @apply text-base
     .degree
-      @apply ml-1 mb-4 text-base text-blue-lighter
+      @apply ml-2 mb-4 text-base text-blue-lighter
+
+  .resume-activities-sidebar
+    background-color: #e64141
+    @apply bg-blue-darker p-4 text-base text-blue-lightest -mt-4 rounded-lg
+    h3
+      @apply text-2xl text-white
+    li
+      @apply list-reset -ml-6 leading-loose
+
+.resume-qualifications
+  @apply bg-blue-lightest flex flex-col rounded-lg
+
+
+.resume-skills
+  @apply flex  flex-row bg-yellow-light p-4 py-3 text-base mt-3 leading-normal rounded-lg
+  background-color:  #EBAA1E
+  h2
+    @apply text-grey-darkest text-3xl
+  li
+    @apply inline
+
+  .resume-skills-list
+    @apply text-blue-darker -ml-6
+
+.resume-skills-group
+  @apply flex flex-col mb-4
+
+.resume-skills-set
+  @apply float-right text-2xl text-blue-lightest inline-block w-48 pt-2 ml-6 mb-3
+
+.resume-skills-items
+  @apply  text-blue-darker text-lg w-4/5
+
+.resume-job-title
+  @apply text-lg my-2 text-blue-dark -mb-1
+
+.resume-employment-dates
+  @apply invisible leading-none font-semibold italic text-blue-dark
+
+.resume-employer
+  @apply text-grey-darkest mt-3 leading-none text-2xl text-grey-darkest
+
+.resume-job-location
+  display: none
+  font-style: oblique
+  font-weight: bold
+  float: right
+  margin-right: 1rem
+
+.resume-experience-section
+  // @include make-col(9)
+  @apply p-4 text-base w-full
+
+
+  .resume-job-experiences
+    @apply text-blue-darkest
+    li
+      list-style-type: circle
+      @apply leading-normal
 
 
 .field-circle
