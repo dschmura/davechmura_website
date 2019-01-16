@@ -33,14 +33,18 @@
 
 .resume-summary
   @apply bg-blue-lighter p-4 px-8 rounded-lg
+  h2
+    @apply text-blue text-2xl float-left px-4
   p
     @apply text-lg leading-normal
 
 .resume
   @apply flex  flex-row text-blue-darkest
+  h2
+    @apply text-grey-darkest font-medium font-serif italic
 
 .resume-sidebar
-  @apply  mr-2 my-3 w-1/2
+  @apply  mr-2 my-3 w-64
   p
     @apply text-base
   h3
@@ -54,45 +58,44 @@
     h3
       @apply text-grey-darkest
     li
-      @apply text-blue-darker font-bold text-xl mb-1 -ml-2
+      @apply text-blue-darker font-bold mb-1 -ml-2 mx-auto
     .resume-experience-description
-      @apply text-blue-lightest pb-2
+      @apply text-blue-lightest pb-2 -ml-4
 
   .resume-a-bit-about-me-sidebar
     // background-color: #79A092
-    @apply bg-blue-lighter p-4 pb-8 -mt-2 rounded-lg
+    @apply bg-blue-light p-4 pb-8 -mt-2 rounded-lg
     p
       @apply text-blue-darker text-base px-4
 
   .resume-education-sidebar
     // background-color: #607B9B
-    @apply bg-blue-darkest text-white rounded-lg -mt-4 p-4
+    @apply bg-blue-darkest text-white rounded-lg -mt-4 px-4 pt-1 pb-4
     ul
       @apply -ml-8
-    h3
-      @apply text-grey-light
+    h2
+      @apply text-blue-lightest mb-2
     h4
-      @apply text-base
+      @apply font-thin mb-1
     .degree
-      @apply ml-2 mb-4 text-base text-blue-lighter
+      @apply ml-1 mb-4 text-sm text-blue-lighter italic
 
   .resume-activities-sidebar
     background-color: #e64141
     @apply bg-blue-darker p-4 text-base text-blue-lightest -mt-4 rounded-lg
-    h3
-      @apply text-2xl text-white
+    h2
+      @apply text-2xl text-blue-lighter
     li
       @apply list-reset -ml-6 leading-loose
 
 .resume-qualifications
-  @apply bg-blue-lightest flex flex-col rounded-lg
-
+  @apply bg-blue-lightest flex flex-col rounded-lg w-full
 
 .resume-skills
   @apply flex  flex-row bg-yellow-light p-4 py-3 text-base mt-3 leading-normal rounded-lg
   background-color:  #EBAA1E
   h2
-    @apply text-grey-darkest text-3xl
+    // @apply text-grey-darkest font-medium font-serif italic
   li
     @apply inline
 
@@ -106,7 +109,7 @@
   @apply float-right text-2xl text-blue-lightest inline-block w-48 pt-2 ml-6 mb-3
 
 .resume-skills-items
-  @apply  text-blue-darker text-lg w-4/5
+  @apply  text-blue-darker text-base
 
 .resume-job-title
   @apply text-lg my-2 text-blue-dark -mb-1
@@ -137,8 +140,7 @@
 
 
 .field-circle
-  float: right
-
+  @apply float-right h-24 w-24 resize
 .connect-icons
   color: #FFF
   &:hover
