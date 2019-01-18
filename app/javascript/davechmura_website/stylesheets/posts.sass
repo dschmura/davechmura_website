@@ -7,14 +7,28 @@
     @apply h-48  overflow-y-hidden border-b
 
 
-
-.media-heading
-  @apply border-b pb-4
+.posts-post-header
+  @apply border-b pb-4 mb-3 flex justify-between
   a
-    @apply text-blue-dark
+    @apply text-blue-dark no-underline
+    &:hover
+      @apply text-blue-darker
+
+.posts-post-author
+   @apply text-sm text-grey-dark
 
 .post-tags
   @apply bg-grey-lightest flex flex-wrap
 
 .post-tag
   @apply  bg-blue w-auto my-2 mx-2 rounded py-1 px-2 text-center
+
+.posts-post-footer
+  @apply  text-sm text-grey-darker bg-grey-lighter mt-3 py-4 pl-4
+
+.post-index-actions
+  @apply  text-sm float-right
+  a
+    @apply text-white no-underline bg-blue-light px-6 py-2 mx-2 rounded-full
+    &:hover
+      @apply bg-blue

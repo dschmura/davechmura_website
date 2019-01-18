@@ -2,23 +2,23 @@
 -# = link_to 'New Post', new_post_path if policy(@post).new?
 .mt-20
   - @posts.each do |post|
-    .well.mb-6
+    .mb-6
       .media
         -# %a.pull-left{:href => "#"}
         -#   %img.media-object{:src => "http://placekitten.com/150/150", :alt => 'Kitteh'}
         .media-body.w-full
-          %h4.media-heading
-            = link_to post.title, post
+          .media-heading.posts-post-header
+            %h2= link_to post.title, post
             = '(unpublished)' unless post.published?
-          %p.text-sm.text-grey-dark.float-right
-            By: #{post.user.email}
+            .posts-post-author
+              By: #{post.user.email}
           .truncated-post= post.content
 
-          .text-sm.text-grey-darker.bg-grey-lighter.mt-3
+          .posts-post-footer
             %i.far.fa-calendar-alt
             Published:
             = time_ago_in_words post.created_at
             ago
-          .post-index-actions.text-xs.float-right.-mt-5
-            = link_to 'Edit | ', edit_post_path(post) if policy(post).update?
-            = link_to 'Read More', post
+            .post-index-actions
+              = link_to 'Edit | ', edit_post_path(post) if policy(post).update?
+              = link_to 'Read More', post
