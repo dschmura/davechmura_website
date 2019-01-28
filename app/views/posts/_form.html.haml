@@ -1,24 +1,24 @@
-= form_for @post do |f|
-  - if @post.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:"
-      %ul
-        - @post.errors.full_messages.each do |message|
-          %li= message
+.post-form
+  = form_for @post do |f|
+    - if @post.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:"
+        %ul
+          - @post.errors.full_messages.each do |message|
+            %li= message
 
-  .field
-    .text-3xl= f.label "Title:"
-    .h-12.text-3xl.shadow= f.text_field :title
-  .field
-    = f.label :status
-    = f.select :status, :collection => Post.statuses.keys.to_a
-  .field
-    = f.label 'Tag Me'
-    .h-12.text-3xl.shadow= f.text_field :tag_list
+    .field.post-form-title
+      = f.label "Title:"
+      .shadow= f.text_field :title
+    .field.post-form-status
+      = f.label :status
+      = f.select :status, :collection => Post.statuses.keys.to_a
+    .field.post-form-tags
+      = f.label 'Tag Me'
+      .shadow= f.text_field :tag_list
 
 
-
-  .field
-    = f.rich_text_area :content
-  .actions
-    = f.submit 'Save'
+    .field.post-content-area
+      = f.rich_text_area :content
+    .actions
+      = f.submit 'Save'

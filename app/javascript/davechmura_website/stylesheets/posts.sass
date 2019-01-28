@@ -26,6 +26,37 @@
 .posts-post-footer
   @apply  text-sm text-grey-darker bg-grey-lighter mt-3 py-4 pl-4
 
+.post-form
+  @apply flex flex-col p-6 w-3/4 mx-auto
+
+  .field
+    @apply my-4 leading-tight inline-flex justify-start align-text-top mx-6
+
+  label
+    @apply text-grey-darkest text-3xl font-bold mr-4
+
+  input
+    @apply leading-loose  shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight text-3xl
+    &:focus
+      @apply shadow-outline outline-none
+    &[type="submit"]
+      @apply bg-green text-3xl rounded
+
+  select
+    @apply block appearance-none w-full bg-white border border-grey-light px-4 py-6 pr-8 rounded shadow leading-tight h-12 text-grey-darker text-3xl
+
+    &:hover
+      @apply border-grey
+    &:focus
+      @apply outline-none shadow-outline
+
+  .post-form-title
+    @apply
+
+.post-content-area
+  @apply mt-32 inline-block flex flex-col
+
+
 .post-index-actions
   @apply  text-sm float-right
   a
