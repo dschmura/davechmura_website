@@ -20,5 +20,5 @@
             = time_ago_in_words post.created_at
             ago
             .post-index-actions
-              = link_to 'Edit | ', edit_post_path(post) if policy(post).update?
+              = link_to 'Edit', edit_post_path(post) if policy(post).update?
               = link_to 'Read More', post
