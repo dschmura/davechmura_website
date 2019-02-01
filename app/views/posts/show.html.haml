@@ -1,7 +1,4 @@
 .post
-  %p#notice= notice
-
-
   .post-meta
     %h1.post-title= @post.title
     .post-author
@@ -10,21 +7,12 @@
     %b Status:
     = @post.status
 
-
-
   .post-tags
     - @post.tag_list.each do |tag|
       .post-tag= tag
 
-
-
   %p.post-content
     .trix-content= @post.content
 
-
-
-  -# = link_to 'Edit', edit_post_path(@post)
-  -# \|
-  -# = link_to 'Back', posts_path
   = link_to 'Edit', edit_post_path(@post) if policy(@post).update?
   = link_to 'Delete', post_path(@post), method: :delete if policy(@post).destroy?
