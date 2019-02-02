@@ -1,16 +1,13 @@
 @import 'variables'
 
 .resume-container
-  @apply  w-full
+  @apply  w-full flex flex-col mt-3
 
 .resume-header
   // height: 250px
   background-color:  #EBAA1E
   background-image: url('../images/resume_header.jpg')
-  background-position: right
-  background-size: 100% 107%
-  background-repeat: no-repeat
-  @apply h-32 border-white border-b-4
+  @apply h-32 border-white border-b-4 rounded-lg bg-no-repeat bg-auto bg-right
 
   .resume-contact
     // @include transparent(0.85, 85)
@@ -18,7 +15,7 @@
     // -webkit-transform: rotate(-90deg)
     // -moz-transform: rotate(-90deg)
     background-color:  #EBAA1E
-    @apply text-center font-sans mt-4 h-full flex flex-col w-64 border-r-4 border-white
+    @apply text-center font-sans h-full flex flex-col w-64 border-r-4 border-white rounded-l-lg
     .social-links
       @apply text-center content-center mt-1 mx-auto items-center pb-4
     .resume-name
@@ -92,7 +89,7 @@
   @apply bg-blue-lightest flex flex-col rounded-lg w-full
 
 .resume-skills
-  @apply flex  flex-row bg-yellow-light p-4 py-3 text-base mt-1 leading-normal rounded-lg
+  @apply flex flex-col bg-yellow-light  py-2 text-base mt-1 leading-tight rounded-lg
   background-color:  #EBAA1E
   h2
     // @apply text-grey-darkest font-medium font-serif italic
@@ -101,6 +98,8 @@
 
   .resume-skills-list
     @apply text-blue-darker -ml-6
+  @screen lg
+    @apply flex-row
 
 .resume-skills-group
   @apply flex flex-col mb-4
