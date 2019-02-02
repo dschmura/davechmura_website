@@ -35,12 +35,14 @@
     @apply text-xl leading-tight font-serif italic
 
 .resume
-  @apply flex  flex-row text-blue-darkest
+  @apply flex flex-col-reverse text-blue-darkest
   h2
     @apply text-grey-darkest font-medium font-serif italic
+  @screen sm
+    @apply flex-row
 
 .resume-sidebar
-  @apply  mr-2 my-3 w-64
+  @apply  mr-2 my-3 w-full
   p
     @apply text-base
   h3
@@ -83,13 +85,20 @@
       @apply text-2xl text-blue-lighter
     li
       @apply list-reset -ml-10 leading-loose
+  @screen sm
+    @apply w-64
 
 .resume-qualifications
   @apply bg-blue-lightest flex flex-col rounded-lg w-full
+  h1
+    @apply font-thin text-blue-darker
+    @screen sm
+      @apply hidden
 
 .resume-skills
   @apply flex flex-col bg-yellow-light  py-2 text-base mt-1 leading-tight rounded-lg
   background-color:  #EBAA1E
+
   h2
     // @apply text-grey-darkest font-medium font-serif italic
   li
