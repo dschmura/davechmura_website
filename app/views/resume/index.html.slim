@@ -1,0 +1,44 @@
+.resume-container
+  .resume-header
+    .resume-contact
+      .resume-name
+        h2= link_to('David Chmura', root_path)
+      .resume-phone
+        h3 734•864•1232
+      br
+      .resume-email
+        | dschmura@humbledaisy.com
+      .social-links
+        = link_to twitter_path, target: '_blank' do
+          .social
+            i.fab.fa-twitter
+
+        = mail_to 'dschmura@humbledaisy.com', subject: 'A message to ye from ye old site' do
+          .social
+            / %i.fab.fa-envelope
+            | M
+        / .social
+        /   %i.fas.fa-podcast
+        = link_to github_path, target: '_blank' do
+          .social
+            i.fab.fa-github
+
+        = link_to linkedin_path, target: '_blank' do
+          .social
+            i.fab.fa-linkedin-in
+
+  .resume-summary
+    = render 'summary'
+
+  .resume
+    .resume-sidebar
+      / = render 'experience'
+      = render 'about_me'
+      = render 'activities'
+      = render 'education'
+
+    .resume-qualifications
+      .resume-skills
+        = render 'skills'
+      .resume-experience-section
+        = render 'employment'
