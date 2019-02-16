@@ -24,6 +24,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 # gem 'administrate', '~> 0.8.1'
 gem 'haml-rails'
+gem 'slim-rails'
 gem 'sidekiq', '~> 5.0'
 gem 'uglifier'
 gem "actiontext", github: "rails/actiontext", require: "action_text"
