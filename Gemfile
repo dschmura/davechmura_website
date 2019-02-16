@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 # gem 'administrate', '~> 0.8.1'
-gem 'haml-rails'
+# gem 'haml-rails'
 gem 'slim-rails'
 gem 'sidekiq', '~> 5.0'
 gem 'uglifier'
