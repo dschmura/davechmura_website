@@ -1,12 +1,11 @@
 header
-
-  @apply bg-grey-darker flex flex-wrap items-center justify-center h-auto w-full
+  @apply bg-grey-darker flex flex-col items-center justify-center h-auto w-full
   a
     @apply text-blue-lightest font-sans no-underline text-xl
   a:hover
     @apply text-blue-lighter no-underline
   @screen sm
-    @apply justify-between
+    @apply justify-between flex-row
 
 .header-logo
   @apply w-16 h-16 rounded-full ml-4 my-1 mt-2
@@ -14,7 +13,9 @@ header
 .header-links
   @apply flex flex-no-wrap
   a
-    @apply px-4
+    @apply px-2 text-lg
+    @screen sm
+      @apply px-4
 
 .social-links
   @apply flex flex-row mr-2
