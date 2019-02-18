@@ -1,7 +1,7 @@
 header
   = link_to root_path do
-    = image_tag(asset_pack_path('davechmura_website/images/DavePics/hug.jpg'), alt: "#{(t :sitename)} Logo, link to home page.", class: 'header-logo ')
-
+    / = image_tag(asset_pack_path('davechmura_website/images/DavePics/hug.jpg'), alt: "#{(t :sitename)} Logo, link to home page.", class: 'header-logo ')
+    = image_tag(asset_pack_path('media/hug.jpg'), alt: "#{(t :sitename)} Logo, link to home page.", class: 'header-logo ')
   nav.header-links
     = link_to 'About', about_path
     = link_to 'Resume', resume_path
