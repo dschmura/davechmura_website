@@ -1,7 +1,7 @@
   // Include external resources for this app_files
   // import 'bootstrap'
   // import 'actiontext'
-  // import 'trix/dist/trix.css'
+
   // import fontawesome from "@fortawesome/fontawesome-free";
   import '@fortawesome/fontawesome-free/js/all';
 

@@ -46,3 +46,7 @@ require.context('davechmura_website/images/', true, /.(gif|jpg|jpeg|png|svg)$/)
 document.addEventListener('turbolinks:load', () => {
   FontAwesome.dom.i2svg();
 })
+
+require("trix")
+require("@rails/actiontext")
+import 'trix/dist/trix.css'
