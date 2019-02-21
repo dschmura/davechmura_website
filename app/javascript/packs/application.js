@@ -24,6 +24,8 @@ import 'davechmura_website'
 // import "actiontext"
 require("@rails/ujs").start()
 require("@rails/activestorage").start()
+var Turbolinks = require("turbolinks")
+Turbolinks.start()
 
 // import 'davechmura_website/stylesheets/_contact_us_page.sass'
 import 'davechmura_website/stylesheets/_flash_errors.sass'
