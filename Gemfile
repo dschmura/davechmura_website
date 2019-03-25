@@ -30,7 +30,7 @@ gem 'uglifier'
 gem 'coffee-script'
 # gem "actiontext", github: "rails/actiontext", require: "action_text"
 gem "image_processing", "~> 1.2" # for Active Storage variants
-gem 'devise', '~> 4.5.0'
+gem 'devise', '~> 4.6.0'
 gem 'pundit'
 gem 'acts-as-taggable-on', :git => 'https://github.com/mbleigh/acts-as-taggable-on'
 
@@ -77,7 +77,8 @@ group :test do
   gem 'capybara', '~> 2.16.1'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  # gem 'chromedriver-helper'
+  gem 'webdrivers'
   gem 'shoulda-matchers'
   gem 'rails-controller-testing'
   gem 'ffaker'
