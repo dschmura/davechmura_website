@@ -1,4 +1,4 @@
-footer.footer
+%footer.footer
   .footer-logo
     = link_to image_tag(asset_pack_path('media/hug.jpg'),alt: "#{(t :sitename)} Logo, link to home page.", id: root_path(anchor: 'page-top')), root_path
   .footer-links
@@ -20,18 +20,18 @@ footer.footer
     .social-links
       = link_to twitter_path, target: '_blank' do
         .social
-          i.fab.fa-twitter
+          %i.fab.fa-twitter
 
       = mail_to 'dschmura@humbledaisy.com', subject: 'A message to ye from ye old site' do
         .social
-          / %i.fab.fa-envelope
-          | M
+          %/ %i.fab.fa-envelope
+          M
       / .social
       /   %i.fas.fa-podcast
       = link_to github_path, target: '_blank' do
         .social
-          i.fab.fa-github
+          %i.fab.fa-github
 
       = link_to linkedin_path, target: '_blank' do
         .social
-          i.fab.fa-linkedin-in
+          %i.fab.fa-linkedin-in
