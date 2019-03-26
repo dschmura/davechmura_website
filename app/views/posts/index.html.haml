@@ -8,17 +8,17 @@
         /   %img.media-object{:src => "http://placekitten.com/150/150", :alt => 'Kitteh'}
         .media-body.w-full
           .media-heading.posts-post-header
-            h2= link_to post.title, post
+            %h2= link_to post.title, post
             = '(unpublished)' unless post.published?
             .posts-post-author
-              | By: #{post.user.email}
+              By: #{post.user.email}
           .truncated-post #{post.content.to_s}
 
           .posts-post-footer
-            i.far.fa-calendar-alt
-            | Published:
+            %i.far.fa-calendar-alt
+            Published:
             = time_ago_in_words post.created_at
-            | ago
+            ago
             .post-index-actions
               = link_to 'Edit', edit_post_path(post) if policy(post).update?
               = link_to 'Read More', post

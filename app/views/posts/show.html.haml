@@ -1,17 +1,17 @@
 .post
   .post-meta
-    h1.post-title= @post.title
+    %h1.post-title= @post.title
     .post-author
       = "Author: #{@post.user.email}"
   .post-status
-    b Status:
+    %b Status:
     = @post.status
 
   .post-tags
     - @post.tag_list.each do |tag|
       .post-tag= tag
 
-  p.post-content
+  %p.post-content
     .trix-content= @post.content.to_s
 
   = link_to 'Edit', edit_post_path(@post) if policy(@post).update?
