@@ -1,7 +1,3 @@
-// @tailwind preflight
-// @tailwind components
-// @tailwind utilities
-
 .truncated-post
   & .trix-content
     @apply h-48  overflow-y-hidden border-b
@@ -9,33 +5,33 @@
 .posts-post-header
   @apply border-b pb-4 mb-3 flex justify-between
   a
-    @apply text-blue-dark no-underline font-thin text-4xl
+    @apply text-blue-600 no-underline font-thin text-4xl
     &:hover
-      @apply text-blue-darker
+      @apply text-blue-700
 
 .posts-post-author
-   @apply text-sm text-grey-dark
+   @apply text-sm text-gray-600
 
 .posts-post-footer
-  @apply  text-sm text-grey-darker bg-grey-lighter mt-3 py-4 pl-4
+  @apply  text-sm text-gray-700 bg-gray-300 mt-3 py-4 pl-4
 
 .post
   @apply w-3/4 mx-auto mt-2
 
 .post-title
-  @apply my-4 text-4xl font-normal text-blue-dark
+  @apply my-4 text-4xl font-normal text-blue-600
 
 .post-tags
   @apply flex flex-wrap py-2 mt-2 -ml-2
 
 .post-tag
-  @apply  bg-blue-lighter text-blue-darker font-semibold w-auto my-2 mx-2 rounded-lg py-2 px-3 text-center
+  @apply  bg-blue-300 text-blue-700 font-semibold w-auto my-2 mx-2 rounded-lg py-2 px-3 text-center
 
 .post-meta
   @apply flex flex-row justify-between h-24 my-auto align-middle
 
 .post-author
-  @apply font-semibold text-grey-darker my-auto
+  @apply font-semibold text-gray-700 my-auto
 
 .post-form
   @apply flex flex-col p-6 w-3/4 mx-auto
@@ -44,20 +40,20 @@
     @apply my-4 leading-tight inline-flex justify-start align-text-top mx-6
 
   label
-    @apply text-grey-darkest text-3xl font-bold mr-4
+    @apply text-gray-900 text-3xl font-bold mr-4
 
   input
-    @apply leading-loose  shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight text-3xl
+    @apply leading-loose  shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight text-3xl
     &:focus
       @apply shadow-outline outline-none
     &[type="submit"]
-      @apply bg-green text-3xl rounded
+      @apply bg-green-500 text-3xl rounded
 
   select
-    @apply block appearance-none w-full bg-white border border-grey-light px-4 py-6 pr-8 rounded shadow leading-tight h-12 text-grey-darker text-3xl
+    @apply block appearance-none w-full bg-white border border-gray-400 px-4 py-6 pr-8 rounded shadow leading-tight h-12 text-gray-700 text-3xl
 
     &:hover
-      @apply border-grey
+      @apply border-gray-500
     &:focus
       @apply outline-none shadow-outline
 
@@ -71,6 +67,6 @@
 .post-index-actions
   @apply  text-sm float-right
   a
-    @apply text-white no-underline bg-blue-light px-6 py-2 mx-2 rounded-full
+    @apply text-white no-underline bg-blue-400 px-6 py-2 mx-2 rounded-full
     &:hover
-      @apply bg-blue
+      @apply bg-blue-500

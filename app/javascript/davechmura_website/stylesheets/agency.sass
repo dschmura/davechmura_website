@@ -3,20 +3,20 @@
 
 .mast-header
   background-image: url("../images/DavePics/hug_70.svg")
-  @apply text-center rounded-b-lg bg-center bg-no-repeat bg-cover bg-grey-lighter -mt-10
+  @apply text-center rounded-b-lg bg-center bg-no-repeat bg-cover bg-gray-300 -mt-10
   @screen sm
     @apply -mt-10 -mx-6
   .mast-header-text
-    @apply  p-24 text-blue-darker m-12
+    @apply  p-24 text-blue-700 m-12
 
 .intro-lead-in
   @apply font-sans text-5xl font-bold
 
 .intro-heading
-  @apply font-serif text-4xl italic leading-loose text-blue
+  @apply font-serif text-4xl italic leading-loose text-blue-500
 
 .intro-text
-  @apply text-grey-darkest mt-12
+  @apply text-gray-900 mt-12
   p
     @apply text-xl
     @apply my-4 text-2xl
@@ -24,9 +24,9 @@
 .intro-call-to-action
   @apply mt-6
   a
-    @apply px-6 py-2 rounded-full bg-yellow-dark text-2xl text-grey-darker no-underline
+    @apply px-6 py-2 rounded-full bg-yellow-600 text-2xl text-gray-700 no-underline
     &:hover
-      @apply text-blue no-underline bg-yellow-light
+      @apply text-blue-500 no-underline bg-yellow-400
 
 .roles
   @apply text-center
@@ -36,7 +36,7 @@
 .skills
 
 .section-head
-  @apply text-grey-darkest text-3xl my-8 text-center
+  @apply text-gray-900 text-3xl my-8 text-center
   p
     @apply text-2xl
 
@@ -44,7 +44,7 @@
   @apply flex flex-wrap  content-center self-center justify-between
 
   .skill-item
-    @apply text-base text-blue-darkest text-center w-full bg-blue-lightest p-3 border-8 border-white rounded
+    @apply text-base text-blue-900 text-center w-full bg-blue-400 p-3 border-8 border-white rounded
 
   @screen sm
     @apply text-base

@@ -1,8 +1,11 @@
 @import 'variables'
 
-@tailwind preflight
+@tailwind base
 @tailwind components
 @tailwind utilities
+// @import "tailwindcss/base"
+// @import "tailwindcss/components"
+// @import "tailwindcss/utilities"
 
 .modal-backdrop
   z-index: -1 !important
@@ -17,7 +20,7 @@ body
   @apply flex-grow px-6 py-4 mx-auto -mt-6
 
 .debug_dump
-  @apply bg-grey-lighter border border-red-dark rounded-lg p-2 w-2/3 mx-auto
+  @apply bg-gray-300 border border-red-600 rounded-lg p-2 w-2/3 mx-auto
 
 /*! debug.css | MIT License | https://gist.github.com/zaydek/6b2e55258734deabbd2b4a284321d6f6 */
 // To use add a {:debug => ""} to any element you want to understand better

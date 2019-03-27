@@ -1,9 +1,9 @@
 header
-  @apply bg-grey-darker flex flex-col items-center justify-center h-auto w-screen
+  @apply bg-gray-700 flex flex-col items-center justify-center h-auto w-screen z-10
   a
-    @apply text-blue-lightest font-sans no-underline text-xl
+    @apply text-blue-100 font-sans no-underline text-xl
   a:hover
-    @apply text-blue-lighter no-underline
+    @apply text-blue-300 no-underline
   @screen sm
     @apply justify-between flex-row w-full
 
@@ -20,6 +20,6 @@ header
 .social-links
   @apply flex flex-row mr-2
 .social
-  @apply flex items-center justify-center text-grey-darker font-semibold border-2 text-xs border-blue rounded-full mx-1 h-8 w-8 bg-blue-lightest
+  @apply flex items-center justify-center text-gray-700 font-semibold border-2 text-xs border-blue-500 rounded-full mx-1 h-8 w-8 bg-blue-100
   &:hover
-    @apply bg-blue-lighter text-white
+    @apply bg-blue-300 text-white
