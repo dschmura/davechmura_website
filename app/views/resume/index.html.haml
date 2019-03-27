@@ -1,11 +1,11 @@
 .resume-container
-  .resume-header
+  %header.resume-header
     .resume-contact
       .resume-name
         %h2= link_to('David Chmura', root_path)
       .resume-phone
         %h3 734•864•1232
-      %br
+
       .resume-email
         dschmura@humbledaisy.com
       .social-links
@@ -15,7 +15,7 @@
 
         = mail_to 'dschmura@humbledaisy.com', subject: 'A message to ye from ye old site' do
           .social
-            %i.fab.fa-envelope
+            %i.fas.fa-envelope
 
         / .social
         /   %i.fas.fa-podcast

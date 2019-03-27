@@ -1,22 +1,18 @@
 @import 'variables'
 
 .resume-container
-  @apply  w-full flex flex-col mt-3
+  @apply flex flex-col mt-3
 
 .resume-header
   background-color:  #EBAA1E
   background-image: url('../images/resume_header.jpg')
-  @apply h-32 border-white border-b-4 rounded-lg bg-no-repeat bg-cover bg-right
+  @apply h-32 border-white border-b-4 rounded-lg bg-no-repeat bg-cover bg-right z-0
 
   .resume-contact
-    // @include transparent(0.85, 85)
-    // transform: rotate(-90deg)
-    // -webkit-transform: rotate(-90deg)
-    // -moz-transform: rotate(-90deg)
     background-color:  #EBAA1E
     @apply text-center font-sans h-full flex flex-col w-64 border-r-4 border-white rounded-l-lg
     .social-links
-      @apply text-center content-center mt-1 mx-auto items-center pb-4
+      @apply text-center content-center  mx-auto items-center pb-4
     .resume-name
       a
         @apply text-white text-2xl no-underline
@@ -25,12 +21,12 @@
     .resume-phone
       @apply text-white font-medium text-base
     .resume-email
-      @apply text-white text-sm font-medium mb-2
+      @apply text-white text-sm font-medium
 
 .resume-summary
-  @apply bg-blue-300 p-4 px-8 rounded-lg
+  @apply bg-blue-300 p-4 px-4 rounded-lg
   h2
-    @apply text-blue-500 text-5xl float-left px-2  pr-3 align-middle leading-none
+    @apply text-blue-500 text-4xl float-left px-2  pr-3 align-middle leading-none
   p
     @apply text-xl leading-tight font-serif italic
 
@@ -46,7 +42,7 @@
   p
     @apply text-base
   h3
-    @apply p-2 text-3xl mb-2 text-gray-900
+    @apply p-2 text-red-300 mb-2 text-gray-900
   // margin-top: 3rem
   // margin-right: 1rem
   li
@@ -61,10 +57,11 @@
       @apply text-blue-100 pb-2 -ml-4
 
   .resume-a-bit-about-me-sidebar
-    // background-color: #79A092
     @apply bg-blue-400 p-2 pb-8 -mt-2 rounded-lg
+    h2
+      @apply text-xl text-blue-900
     p
-      @apply text-blue-700 text-base px-1 pt-1
+      @apply text-blue-800 text-base px-1 pt-1
 
   .resume-education-sidebar
     // background-color: #607B9B
@@ -96,21 +93,21 @@
       @apply hidden
 
 .resume-skills
-  @apply flex flex-col bg-yellow-400  py-2 text-base mt-1 leading-tight rounded-lg
+  @apply flex flex-col bg-yellow-400  py-2 text-sm mt-1 leading-tight rounded-lg
   background-color:  #EBAA1E
 
   h2
-    // @apply text-gray-900 font-medium font-serif italic
+    @apply text-gray-900 font-medium font-serif italic
   li
     @apply inline
 
   .resume-skills-list
-    @apply text-blue-700 -ml-6
+    @apply text-blue-700
   @screen lg
     @apply flex-row
 
 .resume-skills-group
-  @apply flex flex-col mb-4
+  @apply flex flex-col mb-4 px-8
 
 .resume-skills-set
   @apply float-right text-2xl text-blue-100 inline-block w-48 pt-2 ml-6 mb-3
@@ -145,7 +142,7 @@
     @apply text-blue-900
     li
       list-style-type: circle
-      @apply leading-normal
+      @apply leading-normal ml-8
 
 
 .field-circle
