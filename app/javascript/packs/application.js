@@ -31,7 +31,7 @@ Turbolinks.start()
 import 'davechmura_website/stylesheets/_flash_errors.sass'
 import 'davechmura_website/stylesheets/_footer.sass'
 import 'davechmura_website/stylesheets/_header.sass'
-import 'davechmura_website/stylesheets/_variables.sass'
+// import 'davechmura_website/stylesheets/_variables.sass'
 import 'davechmura_website/stylesheets/application.sass'
 import 'davechmura_website/stylesheets/agency.sass'
 import 'davechmura_website/stylesheets/pages.sass'
