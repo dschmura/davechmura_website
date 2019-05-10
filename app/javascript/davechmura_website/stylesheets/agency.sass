@@ -3,11 +3,14 @@
 
 .mast-header
   background-image: url("../images/DavePics/hug_70.svg")
-  @apply text-center rounded-b-lg bg-center bg-no-repeat bg-cover bg-gray-300 -mt-10
-  @screen sm
-    @apply -mt-10 -mx-6
-  .mast-header-text
-    @apply  p-24 text-blue-800 m-12
+  height: 500px
+  opacity: 0.5
+  @apply  rounded-b-lg bg-center bg-no-repeat bg-cover bg-gray-300 -mx-8 -mt-4
+
+.mast-header-text
+  @apply  text-blue-800  text-center
+  position: relative
+  bottom: 400px
 
 .intro-lead-in
   @apply font-sans text-5xl font-bold text-blue-700
@@ -15,13 +18,14 @@
 .intro-heading
   @apply font-serif text-4xl italic leading-loose text-blue-600
 
-.intro-text
-  @apply text-blue-900 mt-12 font-light
-  p
-    @apply my-4 text-lg
-  @screen sm
+section
+  .intro-text
+    @apply text-blue-900 font-light -mt-48
     p
-      @apply text-xl
+      @apply text-lg
+    @screen sm
+      p
+        @apply text-xl
 
 .intro-call-to-action
   @apply mt-6
