@@ -4,11 +4,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '6.0.0.rc1'
+gem 'rails', '6.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 # gem 'webpacker', git: 'https://github.com/rails/webpacker.git'
 gem 'webpacker', github: "rails/webpacker"
@@ -21,18 +21,17 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.0', require: false
-
+gem "sassc-rails"
 # gem 'administrate', '~> 0.8.1'
 gem 'haml-rails'
-gem 'slim-rails'
 gem 'sidekiq', '~> 5.0'
 gem 'uglifier'
 gem 'coffee-script'
 # gem "actiontext", github: "rails/actiontext", require: "action_text"
 gem "image_processing", "~> 1.2" # for Active Storage variants
-gem 'devise', '~> 4.6.0'
+gem 'devise'
 gem 'pundit'
-gem 'acts-as-taggable-on', :git => 'https://github.com/mbleigh/acts-as-taggable-on'
+gem 'acts-as-taggable-on'
 
 # gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 # gem 'omniauth-facebook', '~> 4.0'
@@ -49,7 +48,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'listen'
   # Invoke rake tasks on remote server.
   # example use: cap staging    invoke:rake TASK=db:seed
   gem 'capistrano',         require: false
@@ -69,13 +68,12 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', github: 'rails/web-console'
+  gem "web-console", ">= 3.3.0"
 end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.16.1'
-  gem 'selenium-webdriver'
+  gem 'capybara'
   # Easy installation and use of chromedriver to run system tests with Chrome
   # gem 'chromedriver-helper'
   gem 'webdrivers'
