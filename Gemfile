@@ -24,7 +24,7 @@ gem 'bootsnap', '>= 1.4.0', require: false
 gem "sassc-rails"
 # gem 'administrate', '~> 0.8.1'
 gem 'haml-rails'
-gem 'sidekiq', '~> 5.0'
+gem 'sidekiq', '~> 6.4'
 gem 'uglifier'
 gem 'coffee-script'
 # gem "actiontext", github: "rails/actiontext", require: "action_text"
