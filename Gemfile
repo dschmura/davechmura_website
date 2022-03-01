@@ -28,7 +28,7 @@ gem 'sidekiq', '~> 5.0'
 gem 'uglifier'
 gem 'coffee-script'
 # gem "actiontext", github: "rails/actiontext", require: "action_text"
-gem "image_processing", "~> 1.2" # for Active Storage variants
+gem "image_processing", "~> 1.12" # for Active Storage variants
 gem 'devise'
 gem 'pundit'
 gem 'acts-as-taggable-on'
